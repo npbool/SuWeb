@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<constant name="struts.multipart.maxSize" value="104857600"/>
+<package name="main" extends="struts-default">
+	<global-results>
+		<result name="login">/login.jsp</result>
+	</global-results>
+	<action name="loginPerson"
+		class="org.npbool.LoginAction">
+		<result name="success">/success.jsp</result>
+	</action>	
+	<action name="upload"
+		class="org.npbool.UploadAction">
+		<result name="input">/upload.jsp</result>
+		<result name="list">/uploadList.jsp</result>
+	</action>
+</package>
+</struts>    
